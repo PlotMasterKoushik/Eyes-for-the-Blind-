@@ -1,0 +1,15 @@
+[Unit]
+Description=tesseractOCRproject
+After=network.target
+
+[Service]
+ExecStart= ##path to tesseart python script##
+WorkingDirectory=##path to directory##
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=##user name##
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
